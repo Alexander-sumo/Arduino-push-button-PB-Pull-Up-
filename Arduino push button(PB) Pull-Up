@@ -1,0 +1,17 @@
+// The Goal of the program is to Read the state of a push button connected to pin 5 and print it to the serial monitor. The main Theme is Digital Input/Serial.Begin 
+void setup() {
+  // put your setup code here, to run once:
+// Start serial communication  
+Serial.begin(9600);  
+// Configure pin 5 as an input with internal pull-up resistor  
+pinMode(5, INPUT_PULLUP); 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+// Read the pushbutton state and make it equal to an int
+int sensorVal = digitalRead(5); 
+ // Print and Println the button state to the serial monitor  
+Serial.print("Button State = "); 
+ Serial.println(sensorVal);
+}
